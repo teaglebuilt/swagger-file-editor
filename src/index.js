@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SwaggerUI from "swagger-ui-react";
+import "swagger-ui-react/swagger-ui.css";
+import TextEditorPlugin from './plugin';
+import { spec } from './spec'
+
+
+const App = () => (
+  <SwaggerUI
+    spec={spec}
+    plugins={[TextEditorPlugin]}
+  />
+);
+
 
 ReactDOM.render(
   <React.StrictMode>
